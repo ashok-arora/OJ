@@ -2,17 +2,15 @@
 using namespace std;
 
 class Solution {
-public:
-
+  public:
     // Using standard C++ function
-    int searchInsert(vector<int>& nums, int target) {
-        return lower_bound(nums.begin() , nums.end(), target) - nums.begin();
+    int searchInsert(vector<int> &nums, int target) {
+        return lower_bound(nums.begin(), nums.end(), target) - nums.begin();
     }
 
-
     // Implementing lower_bound function using binary search
-    static int searchInsert2(vector<int>const &nums, int target) {
-        if (nums.size() < 1){
+    static int searchInsert2(vector<int> const &nums, int target) {
+        if (nums.size() < 1) {
             return -1;
         }
 
@@ -21,8 +19,8 @@ public:
 
         int last_less = -1;
         while (left <= right) {
-            int mid = left + (right - left)/2;
-            
+            int mid = left + (right - left) / 2;
+
             // number found, return index
             if (nums[mid] == target) {
                 return mid;
@@ -39,12 +37,9 @@ public:
                 right = mid - 1;
             }
         }
-    
+
         return last_less + 1;
-    
     }
 };
 
-int main(){
-    cout << Solution::searchInsert2({1,3,5,6}, 2);
-}
+int main() { cout << Solution::searchInsert2({1, 3, 5, 6}, 2); }

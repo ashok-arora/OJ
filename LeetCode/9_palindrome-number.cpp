@@ -1,5 +1,5 @@
 class Solution {
-public:
+  public:
     /// Using string-reverse functions
     bool isPalindrome(int x) {
         std::string s = std::to_string(x), rev(s);
@@ -15,20 +15,20 @@ public:
         if (x < 0 || (x != 0 && x % 10 == 0)) {
             return false;
         }
-        
+
         int revertedNumber = 0;
 
         // stop when x < revertedNumber
-        while(x > revertedNumber) { 
-            
+        while (x > revertedNumber) {
+
             // revertedNumber => last_x_digit * 10 + current digit
             revertedNumber = (revertedNumber * 10) + (x % 10);
-            
+
             // remove the last digit from x
             x /= 10;
         }
 
         // when x = 12321, return 12 = 123 or 12 = 12
-        return (x == revertedNumber || x == revertedNumber/10);
+        return (x == revertedNumber || x == revertedNumber / 10);
     }
 };
