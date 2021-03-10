@@ -1,11 +1,10 @@
-#include <iostream>
-#include <vector>
-#include <iterator>
 #include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <vector>
 
 class Solution {
   public:
-
     // Using STL
     int removeElement(std::vector<int> &nums, int val) {
         // return nums.size() - count(nums.begin(), nums.end(), val);
@@ -30,11 +29,10 @@ class Solution {
 
         return ptr;
     }
-
 };
 
-int main(){
-    std::vector<int> V = {3,2,2,3};
+int main() {
+    std::vector<int> V = {3, 2, 2, 3};
     Solution S;
     std::cout << S.removeElement2(V, 3) << std::endl;
     for (int x : V) {
