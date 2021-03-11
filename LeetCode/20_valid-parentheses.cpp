@@ -81,3 +81,5 @@ class Solution {
             return false;
     }
 };
+
+int main() { std::cout << Solution::isValid2("({}[]"); }
