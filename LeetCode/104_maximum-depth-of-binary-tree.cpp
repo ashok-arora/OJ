@@ -11,7 +11,7 @@ struct TreeNode {
 
 class Solution {
   public:
-    static int maxDepth(TreeNode const *root) {
+    static int maxDepth(TreeNode *root) {
         if (root == NULL) {
             return 0;
         } else
