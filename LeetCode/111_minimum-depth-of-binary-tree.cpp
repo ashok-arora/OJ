@@ -12,6 +12,8 @@
 
 class Solution {
   public:
+
+    https://leetcode.com/submissions/detail/466528203/
     int minDepth(TreeNode *root) {
         if (root == NULL) {
             return 0;
@@ -22,6 +24,9 @@ class Solution {
             return 1 + min(minDepth(root->left), minDepth(root->right));
     }
     
+
+    // https://leetcode.com/submissions/detail/467389229/
+    // faster than 100.00% of C++ online submissions for Minimum Depth of Binary Tree.
     int minDepth2(TreeNode* root) {
         if(!root) return 0;
         
