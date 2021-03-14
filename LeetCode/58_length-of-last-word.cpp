@@ -1,6 +1,12 @@
+#include <iostream>
+#include <sstream>
+
+/* Sample Test Cases */
+const std::string testcases[] = {" a", "a ", " ", " a b", " a ", "b   a    "};
+
 class Solution {
   public:
-    int lengthOfLastWord(string s) {
+    int lengthOfLastWord(std::string s) {
         int length = 0, start = 0, end = s.size();
 
         for (int i = 0; i < s.size(); i++) {
@@ -27,12 +33,15 @@ class Solution {
         return length;
     }
 
-    int lengthOfLastWord2(string s) {
+    int lengthOfLastWord2(std::string s) {
         std::stringstream ss(s);
-        string token;
+        std::string token;
 
-        while (ss >> token);
+        while (ss >> token)
+            ;
 
         return token.size();
     }
 };
+
+
