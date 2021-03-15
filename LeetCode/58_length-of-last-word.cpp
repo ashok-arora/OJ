@@ -43,5 +43,3 @@ class Solution {
         return token.size();
     }
 };
-
-
