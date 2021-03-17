@@ -1,7 +1,11 @@
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+
 class Solution {
   public:
-    vector<int> twoSum(vector<int> &numbers, int target) {
-        unordered_map<int, int> hash; // Number, Index
+    std::vector<int> twoSum(std::vector<int> &numbers, int target) {
+        std::unordered_map<int, int> hash; // Number, Index
 
         for (int i = 0; i < numbers.size(); i++) {
             int numberToFind = target - numbers[i];
@@ -13,21 +17,23 @@ class Solution {
         }
         return {};
     }
-};
 
-// using iterators
-class Solution {
-  public:
-    vector<int> twoSum(vector<int> &nums, int target) {
-        unordered_map<int, int> imap;
+    // using iterators
+    std::vector<int> twoSum2(std::vector<int> &nums, int target) {
+        std::unordered_map<int, int> imap;
 
         for (int i = 0;; ++i) {
             auto it = imap.find(target - nums[i]);
 
             if (it != imap.end())
-                return vector<int>{i, it->second};
+                return std::vector<int>{i, it->second};
 
             imap[nums[i]] = i;
         }
     }
 };
+
+int main() {
+    Solution solution;
+    return 0;
+}
