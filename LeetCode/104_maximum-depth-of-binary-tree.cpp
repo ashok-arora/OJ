@@ -1,5 +1,9 @@
 // Leetcode already defines the TreeNode struct hence comment it before submission.
 // Definition for a binary tree node.
+
+#include <bits/stdc++.h>
+using namespace std;
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -18,3 +22,5 @@ class Solution {
             return 1 + max(maxDepth(root->left), maxDepth(root->right));
     }
 };
+
+int main() { return 0; }

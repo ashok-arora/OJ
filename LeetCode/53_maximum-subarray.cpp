@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
   public:
     int maxSubArray(vector<int> &A) {
@@ -30,3 +33,5 @@ class Solution {
         return max(max(leftans, rightans), leftmax + rightmax);
     }
 };
+
+int main() { return 0; }

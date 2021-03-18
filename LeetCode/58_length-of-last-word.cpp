@@ -43,3 +43,7 @@ class Solution {
         return token.size();
     }
 };
+
+int main(){
+    return 0;
+}

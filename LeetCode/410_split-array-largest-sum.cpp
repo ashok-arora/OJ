@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
   public:
     int splitArray(const std::vector<int> &pages, const int &m) {
@@ -29,3 +32,5 @@ class Solution {
         return left;
     }
 };
+
+int main() { return 0; }

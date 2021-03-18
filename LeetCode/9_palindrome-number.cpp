@@ -1,3 +1,7 @@
+#include <algorithm>
+#include <iostream>
+#include <string>
+
 class Solution {
   public:
     /// Using string-reverse functions
@@ -8,7 +12,7 @@ class Solution {
     }
 
     /// without converting to string
-    bool isPalindrome(int x) {
+    bool isPalindrome2(int x) {
         // edge case: x is negative || x ends with 0
         // x can't be negative and palindrome because of minus sign
         // if x ends with 0, it has to be start with 0 too, only possible when x = 0
@@ -32,3 +36,5 @@ class Solution {
         return (x == revertedNumber || x == revertedNumber / 10);
     }
 };
+
+int main() { return 0; }
