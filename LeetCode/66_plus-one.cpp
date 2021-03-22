@@ -30,11 +30,11 @@ class Solution {
     vector<int> plusOne2(vector<int> &digits) {
         // n
         vector<int> res = digits;
-        
+
         // n
         reverse(res.begin(), res.end());
         int temp = 1;
-        
+
         // n
         for (int i = 0; i < res.size(); i++) {
             res[i] += temp;
@@ -67,7 +67,7 @@ class Solution {
                 temp = 0;
         }
 
-        if (digits[0] == 0){
+        if (digits[0] == 0) {
             // n
             digits.insert(digits.begin(), 1);
         }
